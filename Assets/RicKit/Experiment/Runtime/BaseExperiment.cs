@@ -5,7 +5,8 @@ namespace RicKit.Experiment
     {
         None,
         S,
-        A
+        A,
+        B
     }
 
     public enum ExperimentTargetUser
