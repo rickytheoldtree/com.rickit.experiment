@@ -12,7 +12,7 @@ namespace RicKit.Experiment
     {
         private const string FirstTimeLogin = "ExperimentFirstTimeLogin";
         private const string VersionKey = "ExperimentVersion";
-        private readonly Dictionary<string, BaseExperiment> experiments = new Dictionary<string, BaseExperiment>();
+        protected readonly Dictionary<string, BaseExperiment> experiments = new Dictionary<string, BaseExperiment>();
 
         /// <summary>
         /// 在注册完所有实验后调用
