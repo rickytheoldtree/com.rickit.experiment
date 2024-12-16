@@ -1,4 +1,6 @@
 # Changelog
+## [1.1.0] - 2024-12-16
+- add: more groups
 ## [1.0.3] -2024-07-08
 - experiments protected
 ## [1.0.2] - 2024-07-05
