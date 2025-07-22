@@ -1,5 +1,5 @@
 # Changelog
-## [1.1.2] - 2024-12-16
+## [1.2.0] - 2024-12-16
 - fix: remove unused code
 ## [1.1.0] - 2024-12-16
 - add: more groups
