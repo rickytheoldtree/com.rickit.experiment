@@ -24,7 +24,6 @@ namespace RicKit.Experiment
     {
         public ExperimentGroup group;
         public abstract ExperimentTargetUser TargetUser { get; }
-        public bool isTarget;
         public abstract override string ToString();
         public abstract BaseExperiment FromString(string data);
         /// <summary>

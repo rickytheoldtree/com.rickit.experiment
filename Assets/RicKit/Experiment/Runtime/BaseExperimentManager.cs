@@ -7,8 +7,14 @@ namespace RicKit.Experiment
     public interface IPrefs
     {
     }
+    public interface IExperimentManager
+    {
+        void Init();
+        void DoExperiment<T>(Action<T> action) where T : BaseExperiment;
+        T GetExperiment<T>() where T : BaseExperiment, new();
+    }
 
-    public abstract class BaseExperimentManager
+    public abstract class BaseExperimentManager : IExperimentManager
     {
         private const string FirstTimeLogin = "ExperimentFirstTimeLogin";
         private const string VersionKey = "ExperimentVersion";
@@ -54,7 +60,7 @@ namespace RicKit.Experiment
                         break;
                 }
 
-                Debug.Log($"{experiment.Key}\n{exp}\n是否为实验目标：{exp.isTarget}\n分组：{exp.group}");
+                Debug.Log($"{experiment.Key}\n{exp}\n是否为实验目标：{exp.group != ExperimentGroup.None}\n分组：{exp.group}");
             }
         }
 
@@ -83,6 +89,11 @@ namespace RicKit.Experiment
         {
             var exp = experiments[typeof(T).Name];
             action(exp as T);
+        }
+
+        public T GetExperiment<T>() where T : BaseExperiment, new()
+        {
+            return experiments[typeof(T).Name] as T;
         }
 
         #region Prefs
