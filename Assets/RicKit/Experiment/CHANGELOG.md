@@ -1,4 +1,6 @@
 # Changelog
+## [1.2.1] - 2026-05-26
+- Expose SaveExperiment
 ## [1.2.0] - 2024-12-16
 - fix: remove unused code
 ## [1.1.0] - 2024-12-16

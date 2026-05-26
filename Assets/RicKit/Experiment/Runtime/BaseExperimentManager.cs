@@ -10,6 +10,7 @@ namespace RicKit.Experiment
         void RegisterExperiment<T>() where T : BaseExperiment, new();
         void DoExperiment<T>(Action<T> action) where T : BaseExperiment;
         T GetExperiment<T>() where T : BaseExperiment, new();
+        void SaveExperiment<T>(T exp) where T : BaseExperiment;
     }
 
     public abstract class BaseExperimentManager : IExperimentManager
@@ -50,7 +51,7 @@ namespace RicKit.Experiment
             return !string.IsNullOrEmpty(data) ? exp.FromString(data) as T : exp;
         }
 
-        private void SaveExperiment<T>(T exp) where T : BaseExperiment
+        public void SaveExperiment<T>(T exp) where T : BaseExperiment
         {
             if (!IsInitialized()) return;
             var key = exp.GetType().Name;
