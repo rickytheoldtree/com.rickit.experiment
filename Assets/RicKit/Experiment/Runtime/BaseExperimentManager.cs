@@ -85,7 +85,7 @@ namespace RicKit.Experiment
 
                     break;
             }
-
+			exp.Init();
             Debug.Log($"{typeof(T).Name}\n{exp}\n是否为实验目标：{exp.group != ExperimentGroup.None}\n分组：{exp.group}");
             SaveExperiment(exp);
         }

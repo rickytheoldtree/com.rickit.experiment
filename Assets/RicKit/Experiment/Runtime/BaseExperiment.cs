@@ -30,5 +30,6 @@ namespace RicKit.Experiment
         /// 当用户为实验目标时首次进入游戏调用，用于分组
         /// </summary>
         public abstract void SetGroup();
+        public abstract void Init();
     }
 }

@@ -1,4 +1,6 @@
 # Changelog
+## [1.3.0] - 2026-07-07
+- add: init for base experiment
 ## [1.2.1] - 2026-05-26
 - Expose SaveExperiment
 ## [1.2.0] - 2024-12-16
